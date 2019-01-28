@@ -5,6 +5,7 @@
 version: 2
 jobs:
   build:
+  
     docker:
       # specify the version you desire here
       - image: circleci/android:api-26-alpha
@@ -35,7 +36,7 @@ jobs:
 
       - save_cache:
           paths:
-            - ~/.gradle
+            - ~/gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
         
       # run tests!
